@@ -93,5 +93,19 @@ module.exports = function makeRouterWithSockets (io) {
     res.redirect('/');
   });
 
+  // delete a tweet
+  router.post('/delete/:id', function (res, req, next) {
+    console.log(req.params);
+    /*var tweetId = req.params.id;
+    var q = 'DELETE FROM tweets WHERE tweets.id=$1';
+
+    client.query(q, [tweetId], function (err, result) {
+      if (err) return next(err);
+    });*/
+
+    res.redirect('/');
+
+  });
+
   return router;
 };
